@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#5AA0FF</color>
+    <color name="primary_variant">#3366CC</color>
+    <color name="secondary">#4ADE80</color>
+    <color name="secondary_variant">#22C55E</color>
+    <color name="background">#0B1220</color>
+    <color name="surface">#111827</color>
+    <color name="error">#F87171</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#E2E8F0</color>
+    <color name="text_primary">#E2E8F0</color>
+    <color name="text_light">#94A3B8</color>
+    <color name="divider">#1F2937</color>
+    <color name="car_blue">#5AA0FF</color>
+    <color name="money_green">#4ADE80</color>
+    <color name="success_green">#22C55E</color>
+    <color name="warning_orange">#F59E0B</color>
+    <color name="card_bg">#111827</color>
+    <color name="accent_light">#1F2937</color>
+    <color name="gain_green">#4ADE80</color>
+    <color name="expense_red">#F87171</color>
+    <color name="primary_dark">#2551A1</color>
+    <color name="primary_soft">#3976D7</color>
+    <color name="accent_teal">#2DD4BF</color>
+    <color name="neutral_800">#0F172A</color>
+    <color name="neutral_600">#94A3B8</color>
+    <color name="neutral_200">#1F2937</color>
+    <color name="card_surface_alt">#1F2937</color>
+</resources>

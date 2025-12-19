@@ -1,0 +1,10 @@
+Abra o projeto no Android Studio:
+
+1. File → Open → c:\Users\mikha\Desktop\calculo de gastos app
+2. Aguarde sincronizar (File → Sync Now)
+3. Android Studio vai regenerar o gradle wrapper automaticamente
+4. Build → Build Bundle(s) / APK(s) → Build APK
+
+Ou via terminal quando o download terminar:
+cd "c:\Users\mikha\Desktop\calculo de gastos app"
+./gradlew.bat assembleDebug

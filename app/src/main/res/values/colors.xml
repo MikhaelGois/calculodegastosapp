@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nova Paleta Principal -->
+    <color name="alabaster_grey">#D8DBE2</color>
+    <color name="powder_blue">#A9BCD0</color>
+    <color name="pacific_blue">#58A4B0</color>
+    <color name="charcoal_blue">#373F51</color>
+    <color name="carbon_black">#1B1B1E</color>
+
+    <!-- Mapeamento para compatibilidade -->
+    <color name="primary">#58A4B0</color>
+    <color name="primary_variant">#373F51</color>
+    <color name="secondary">#A9BCD0</color>
+    <color name="secondary_variant">#58A4B0</color>
+    <color name="background">#D8DBE2</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#D32F2F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#1B1B1E</color>
+    <color name="text_primary">#373F51</color>
+    <color name="text_light">#A9BCD0</color>
+    <color name="divider">#D8DBE2</color>
+
+    <!-- Cores temáticas -->
+    <color name="car_blue">#58A4B0</color>
+    <color name="money_green">#00C853</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="gain_green">#00C853</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="expense_red">#E53935</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="accent_light">#D8DBE2</color>
+
+    <!-- Paleta complementar -->
+    <color name="primary_dark">#373F51</color>
+    <color name="primary_soft">#58A4B0</color>
+    <color name="accent_teal">#58A4B0</color>
+    <color name="neutral_800">#1B1B1E</color>
+    <color name="neutral_700">#373F51</color>
+    <color name="neutral_600">#A9BCD0</color>
+    <color name="neutral_300">#D8DBE2</color>
+    <color name="neutral_200">#D8DBE2</color>
+    <color name="card_surface_alt">#F5F7FA</color>
+</resources>

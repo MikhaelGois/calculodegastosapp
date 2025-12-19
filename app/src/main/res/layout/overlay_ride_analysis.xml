@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:padding="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="24dp"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/pacific_blue"
+        android:id="@+id/cardOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@color/white">
+
+            <!-- Header com recomendação -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvOverlayRecommendation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="✅ ACEITAR"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gain_green"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:id="@+id/btnCloseOverlay"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:contentDescription="Fechar"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/neutral_600" />
+            </LinearLayout>
+
+            <!-- Grid de valores -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="3">
+
+                <!-- R$/Km -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$/Km"
+                        android:textSize="12sp"
+                        android:textColor="@color/neutral_600" />
+
+                    <TextView
+                        android:id="@+id/tvOverlayKmValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.12"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/expense_red"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- R$/Hora -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R$/Hora"
+                        android:textSize="12sp"
+                        android:textColor="@color/neutral_600" />
+
+                    <TextView
+                        android:id="@+id/tvOverlayHourValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="41.17"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/expense_red"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Nota/Status -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diferença"
+                        android:textSize="12sp"
+                        android:textColor="@color/neutral_600" />
+
+                    <TextView
+                        android:id="@+id/tvOverlayDifference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-5%"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/gain_green"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Info extra -->
+            <TextView
+                android:id="@+id/tvOverlayInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uber • 0h18m • 11.00km"
+                android:textSize="11sp"
+                android:textColor="@color/neutral_600"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="4dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

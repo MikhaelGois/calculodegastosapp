@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">32dp</dimen>
+    <dimen name="card_corner">14dp</dimen>
+    <dimen name="card_stroke">1dp</dimen>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">gastos app driver</string>
+    <string name="title_inputs">🚗 Dados do Veículo e Operação</string>
+    <string name="title_results">💵 Seus Ganhos</string>
+    <string name="label_parcela">Valor da parcela (veículo financiado)</string>
+    <string name="label_km_semanal">Limite de KM semanal</string>
+    <string name="label_combustivel">Valor do combustível</string>
+    <string name="label_tanque">Tamanho do tanque de combustível</string>
+    <string name="label_consumo_cidade">Consumo na cidade</string>
+    <string name="label_consumo_rodovia">Consumo na rodovia</string>
+    <string name="label_ipva">Valor IPVA</string>
+    <string name="label_seguro">Valor Seguro (anual)</string>
+    <string name="label_oleo">Valor Troca de Óleo</string>
+    <string name="label_pneu">Valor Pneu (unitário)</string>
+    <string name="label_manutencao">Custo manutenção/revisão</string>
+    <string name="label_lucro_desejado">Quanto em pensa em lucrar?</string>
+    <string name="label_dias_semana">Quantos dias na semana irá trabalhar?</string>
+    <string name="label_horas_dia">Quantas horas pensa em trabalhar por dia?</string>
+    <string name="label_ganho_dia">Ganhos por dia</string>
+    <string name="label_ganho_semanal">Ganho semanal</string>
+    <string name="label_valor_hr">Valor/HR</string>
+    <string name="label_valor_km">Valor/KM</string>
+    <string name="button_calcular">Calcular</string>
+    <string name="currency_format">R$ %,.2f</string>
+    <string name="hint_input">0</string>
+</resources>
