@@ -1,221 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background">
 
-    <!-- Header -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/header_gradient">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="24dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="⚙️ Configurações"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:gravity="center" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ativar monitoramento automático"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:layout_marginTop="12dp"
-                android:alpha="0.85" />
-        </LinearLayout>
-    </FrameLayout>
-
-    <!-- Content -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
-
-        <!-- Status Card -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="12dp"
-            app:strokeWidth="2dp"
-            app:strokeColor="@color/neutral_300"
-            app:cardBackgroundColor="@color/surface">
+            android:orientation="vertical">
 
+            <!-- Header -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/header_gradient">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="⚙️ Configurações"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:alpha="0.85"
+                        android:gravity="center"
+                        android:text="Ativar monitoramento automático"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Content -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="24dp">
 
-                <TextView
+                <!-- Card de Ativação -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Status do Serviço"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_dark"
-                    android:layout_marginBottom="12dp" />
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp">
 
-                <TextView
-                    android:id="@+id/tvStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="❌ Serviço inativo"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/expense_red"
-                    android:layout_marginBottom="16dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="O serviço de monitoramento automático irá:\n\n✓ Detectar apps de corrida\n✓ Mostrar overlay com análise\n✓ Avisar por voz"
-                    android:textSize="13sp"
-                    android:textColor="@color/neutral_700"
-                    android:lineSpacingMultiplier="1.5" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Valores de Referência -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="12dp"
-            app:strokeWidth="2dp"
-            app:strokeColor="@color/neutral_300"
-            app:cardBackgroundColor="@color/surface">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="💰 Seus Valores de Referência"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_dark"
-                    android:layout_marginBottom="16dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Defina os valores mínimos que você calculou:"
-                    android:textSize="13sp"
-                    android:textColor="@color/neutral_700"
-                    android:layout_marginBottom="16dp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:hint="Valor por Hora (R$)"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etValorHora"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                <com.google.android.material.textfield.TextInputLayout
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchAcessibilidade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Serviço de Acessibilidade"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvStatusAcessibilidade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Detecta quando Uber/99 estão abertos."
+                            android:textSize="13sp"/>
+                            
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchCapturaTela"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Captura de Tela (Print)"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Necessário para ler valores da tela via OCR."
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Metas Mínimas -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:hint="Valor por KM (R$)"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etValorKm"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="numberDecimal" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="⚠️ Metas Mínimas (Aceitável)"
+                            android:textColor="@color/warning_orange"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:hint="Mínimo por Hora (R$)">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etValorHora"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mínimo por KM (R$)">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etValorKm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Metas Ótimas -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/surface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:text="🌟 Metas Ótimas"
+                            android:textColor="@color/gain_green"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:hint="Ótimo por Hora (R$)">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etValorHoraOtimo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Ótimo por KM (R$)">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etValorKmOtimo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSalvarValores"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:text="💾 Salvar Valores"
+                    android:layout_marginBottom="24dp"
+                    android:text="💾 Salvar Configurações"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    app:backgroundTint="@color/gain_green"
-                    app:cornerRadius="12dp"
-                    style="@style/Widget.MaterialComponents.Button" />
+                    app:backgroundTint="@color/car_blue"
+                    app:cornerRadius="12dp" />
+
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Warning -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/card_background"
-            android:padding="16dp"
-            android:layout_marginBottom="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⚠️"
-                android:textSize="20sp"
-                android:layout_marginRight="12dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Não compartilhamos dados. O OCR roda localmente no seu celular."
-                android:textSize="13sp"
-                android:textColor="@color/neutral_700" />
         </LinearLayout>
+    </ScrollView>
 
-        <!-- Enable Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnEnableAccessibility"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="🔧 Habilitar serviço"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"
-            app:backgroundTint="@color/car_blue"
-            app:cornerRadius="12dp"
-            app:elevation="4dp"
-            style="@style/Widget.MaterialComponents.Button" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7404233027158501/9547300416"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Back Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnVoltar"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="⬅️ VOLTAR"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:backgroundTint="@color/warning_orange"
-            app:cornerRadius="12dp"
-            style="@style/Widget.MaterialComponents.Button" />
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

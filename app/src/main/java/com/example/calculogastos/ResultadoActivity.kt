@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculogastos.databinding.ActivityResultadoBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import java.text.NumberFormat
 import java.util.*
 
@@ -22,6 +24,11 @@ class ResultadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultadoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Inicializar AdMob
+        MobileAds.initialize(this) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
 
         // Get result from intent
         resultado = intent.getParcelableExtra<ResultadoCalculo>("resultado") ?: run {

@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculogastos.databinding.ActivityAluguelBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import java.text.NumberFormat
 import java.util.*
 
@@ -20,6 +22,11 @@ class AluguelActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAluguelBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Inicializar AdMob
+        MobileAds.initialize(this) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
 
         binding.btnBuscarConsumo.setOnClickListener {
             buscarConsumoNaInternet()

@@ -10,6 +10,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculogastos.databinding.ActivityRideAnalysisBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import java.io.File
 import java.io.FileOutputStream
 import java.text.NumberFormat
@@ -36,6 +38,11 @@ class RideAnalysisActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         super.onCreate(savedInstanceState)
         binding = ActivityRideAnalysisBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Inicializar AdMob
+        MobileAds.initialize(this) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
 
         // Recuperar dados passados
         resultado = intent.getParcelableExtra("resultado")

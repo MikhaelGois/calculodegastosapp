@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.calculogastos.databinding.ActivitySelecaoTipoBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 
 class SelecaoTipoActivity : AppCompatActivity() {
 
@@ -13,6 +15,11 @@ class SelecaoTipoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySelecaoTipoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Inicializar AdMob
+        MobileAds.initialize(this) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
 
         binding.btnFinanciado.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)

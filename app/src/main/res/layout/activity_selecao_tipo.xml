@@ -1,238 +1,259 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Header com Gradiente -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:background="@drawable/header_gradient">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="24dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="💰 Ganhos do Motorista"
-                    android:textSize="34sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:gravity="center" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Calcule seus ganhos em tempo real"
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:alpha="0.9" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Escolha como quer calcular"
-                    android:textSize="13sp"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:layout_marginTop="18dp"
-                    android:alpha="0.8" />
-            </LinearLayout>
-        </FrameLayout>
-
-        <!-- Content -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/screen_padding"
-            android:layout_marginTop="-40dp"
-            android:gravity="center_horizontal">
+            android:orientation="vertical">
 
-            <!-- Financiado Card -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- Header com Gradiente -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="18dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/neutral_200"
-                app:cardBackgroundColor="@color/surface">
+                android:layout_height="260dp"
+                android:background="@drawable/header_gradient">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="24dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🏦 Veículo Financiado"
-                        android:textSize="22sp"
+                        android:text="💰 Ganhos do Motorista"
+                        android:textSize="34sp"
                         android:textStyle="bold"
-                        android:textColor="@color/primary_dark"
-                        android:layout_marginBottom="6dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Para veículos com parcelas mensais a pagar"
-                        android:textSize="14sp"
-                        android:textColor="@color/neutral_600"
-                        android:alpha="0.9"
-                        android:layout_marginBottom="18dp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnFinanciado"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:text="Selecionar"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:backgroundTint="@color/car_blue"
                         android:textColor="@color/white"
-                        app:cornerRadius="12dp"
-                        app:icon="@android:drawable/ic_menu_send"
-                        app:iconGravity="textEnd"
-                        style="@style/Widget.MaterialComponents.Button" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:gravity="center" />
 
-            <!-- Quitado Card -->
-            <com.google.android.material.card.MaterialCardView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calcule seus ganhos em tempo real"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:alpha="0.9" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Escolha como quer calcular"
+                        android:textSize="13sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_marginTop="18dp"
+                        android:alpha="0.8" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Content -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="18dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/neutral_200"
-                app:cardBackgroundColor="@color/surface">
+                android:orientation="vertical"
+                android:padding="@dimen/screen_padding"
+                android:layout_marginTop="-40dp"
+                android:gravity="center_horizontal">
 
-                <LinearLayout
+                <!-- Financiado Card -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                    android:layout_marginBottom="20dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/neutral_200"
+                    app:cardBackgroundColor="@color/surface">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="✅ Veículo Quitado"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/gain_green"
-                        android:layout_marginBottom="6dp" />
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Para veículos próprios sem financiamento"
-                        android:textSize="14sp"
-                        android:textColor="@color/neutral_600"
-                        android:alpha="0.9"
-                        android:layout_marginBottom="18dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🏦 Veículo Financiado"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary_dark"
+                            android:layout_marginBottom="6dp" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnQuitado"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:text="Selecionar"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:backgroundTint="@color/gain_green"
-                        android:textColor="@color/white"
-                        app:cornerRadius="12dp"
-                        app:icon="@android:drawable/ic_menu_send"
-                        app:iconGravity="textEnd"
-                        style="@style/Widget.MaterialComponents.Button" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Para veículos com parcelas mensais a pagar"
+                            android:textSize="14sp"
+                            android:textColor="@color/neutral_600"
+                            android:alpha="0.9"
+                            android:layout_marginBottom="18dp" />
 
-            <!-- Alugado Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="18dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/neutral_200"
-                app:cardBackgroundColor="@color/surface">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnFinanciado"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Selecionar"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/car_blue"
+                            android:textColor="@color/white"
+                            app:cornerRadius="12dp"
+                            app:icon="@android:drawable/ic_menu_send"
+                            app:iconGravity="textEnd"
+                            style="@style/Widget.MaterialComponents.Button" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
 
-                <LinearLayout
+                <!-- Quitado Card -->
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                    android:layout_marginBottom="20dp"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/neutral_200"
+                    app:cardBackgroundColor="@color/surface">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🔑 Veículo Alugado"
-                        android:textSize="22sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/expense_red"
-                        android:layout_marginBottom="6dp" />
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                    <TextView
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Veículo Quitado"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gain_green"
+                            android:layout_marginBottom="6dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Para veículos próprios sem financiamento"
+                            android:textSize="14sp"
+                            android:textColor="@color/neutral_600"
+                            android:alpha="0.9"
+                            android:layout_marginBottom="18dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnQuitado"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Selecionar"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/gain_green"
+                            android:textColor="@color/white"
+                            app:cornerRadius="12dp"
+                            app:icon="@android:drawable/ic_menu_send"
+                            app:iconGravity="textEnd"
+                            style="@style/Widget.MaterialComponents.Button" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Alugado Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/neutral_200"
+                    app:cardBackgroundColor="@color/surface">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Para veículos de locadoras com aluguel semanal"
-                        android:textSize="14sp"
-                        android:textColor="@color/neutral_600"
-                        android:alpha="0.9"
-                        android:layout_marginBottom="18dp" />
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAlugado"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:text="Selecionar"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:backgroundTint="@color/expense_red"
-                        android:textColor="@color/white"
-                        app:cornerRadius="12dp"
-                        app:icon="@android:drawable/ic_menu_send"
-                        app:iconGravity="textEnd"
-                        style="@style/Widget.MaterialComponents.Button" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🔑 Veículo Alugado"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/expense_red"
+                            android:layout_marginBottom="6dp" />
 
-            <!-- Botão Configurações -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnConfiguracoes"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="⚙️ CONFIGURAÇÕES"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:backgroundTint="@color/neutral_800"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:icon="@android:drawable/ic_menu_preferences"
-                app:iconGravity="textStart"
-                style="@style/Widget.MaterialComponents.Button" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Para veículos de locadoras com aluguel semanal"
+                            android:textSize="14sp"
+                            android:textColor="@color/neutral_600"
+                            android:alpha="0.9"
+                            android:layout_marginBottom="18dp" />
 
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAlugado"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:text="Selecionar"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/expense_red"
+                            android:textColor="@color/white"
+                            app:cornerRadius="12dp"
+                            app:icon="@android:drawable/ic_menu_send"
+                            app:iconGravity="textEnd"
+                            style="@style/Widget.MaterialComponents.Button" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Botão Configurações -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConfiguracoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="⚙️ CONFIGURAÇÕES"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/neutral_800"
+                    android:textColor="@color/white"
+                    app:cornerRadius="12dp"
+                    app:icon="@android:drawable/ic_menu_preferences"
+                    app:iconGravity="textStart"
+                    style="@style/Widget.MaterialComponents.Button" />
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7404233027158501/9547300416"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

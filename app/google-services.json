@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303009588024",
+    "project_id": "gastosuber-213aa",
+    "storage_bucket": "gastosuber-213aa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303009588024:android:123c9360749d05000457cd",
+        "android_client_info": {
+          "package_name": "com.mikhael.gastosuber"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvm9H4RjUmTh-lGyTXXl1FWJWoIh-qOM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
