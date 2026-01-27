@@ -3,12 +3,15 @@ import 'package:provider/provider.dart';
 import '../providers/vehicle_provider.dart';
 import '../models/vehicle.dart';
 import '../widgets/custom_widgets.dart';
+import '../widgets/theme_widgets.dart';
 import '../utils/format_utils.dart';
 import 'vehicle_form_screen.dart';
 import 'calculation_screen.dart';
 import 'results_screen.dart';
 import 'history_screen.dart';
 import 'realtime_trip_screen.dart';
+import 'secret_recording_screen.dart';
+import 'recorded_videos_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -34,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         centerTitle: true,
         actions: [
+          const ThemeIconButton(),
           IconButton(
             icon: const Icon(Icons.add),
             onPressed: () => _showAddVehicleDialog(context),
@@ -155,6 +159,34 @@ class _HomeScreenState extends State<HomeScreen> {
                                 MaterialPageRoute(
                                   builder: (context) =>
                                       const HistoryScreen(),
+                                ),
+                              );
+                            },
+                          ),
+                          _buildActionButton(
+                            context,
+                            'Gravar',
+                            Icons.videocam,
+                            Colors.red,
+                            () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const SecretRecordingScreen(),
+                                ),
+                              );
+                            },
+                          ),
+                          _buildActionButton(
+                            context,
+                            'Vídeos',
+                            Icons.video_library,
+                            Colors.cyan,
+                            () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RecordedVideosScreen(),
                                 ),
                               );
                             },

@@ -4,3 +4,8 @@ export 'calculation_screen.dart';
 export 'results_screen.dart';
 export 'history_screen.dart';
 export 'realtime_trip_screen.dart';
+export 'splash_screen.dart';
+export 'theme_settings_screen.dart';
+export 'secret_recording_screen.dart';
+export 'recorded_videos_screen.dart';
+export 'video_playback_screen.dart';

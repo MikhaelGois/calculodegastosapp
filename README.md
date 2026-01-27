@@ -1,12 +1,14 @@
 # Cálculo de Gastos - App Flutter
 
-Um aplicativo moderno e intuitivo para calcular gastos de frota de veículos com rastreamento de corridas em tempo real, desenvolvido com Flutter e Material Design 3.
+Um aplicativo moderno e intuitivo para motoristas de aplicativos gerenciarem custos, analisarem ofertas de corridas e controlarem finanças, desenvolvido com Flutter e Material Design 3.
 
-## ✨ Características
+## ✨ Características Principais
 
 - ✅ **Cálculo Automatizado**: Custos fixos, variáveis, valor/hora e valor/km
 - ✅ **Histórico de Corridas**: Registre e acompanhe todas as corridas
 - ✅ **Rastreamento em Tempo Real**: Inicie corridas com contador automático
+- ✅ **🆕 Sistema de Semáforo (v3.0)**: Análise inteligente de ofertas com recomendações 🟢🟡🔴
+- ✅ **🆕 Controle Financeiro (v3.1)**: Gerencie receitas e despesas para calcular lucro real
 - ✅ **Integração Google Maps**: Abra endereços e rotas diretamente
 - ✅ **Avaliações de Passageiros**: Adicione estrelas e comentários
 - ✅ **Interface Moderna**: Design Material 3 com tema responsivo
@@ -18,6 +20,49 @@ Um aplicativo moderno e intuitivo para calcular gastos de frota de veículos com
 - ✅ **Português Brasileiro**: Totalmente localizado
 
 ## 🎯 Funcionalidades
+
+### 🆕 v3.1 - Sistema de Controle Financeiro
+**Gerencie todas as suas receitas e despesas:**
+- 💰 **Receitas**: Corridas, gorjetas, bônus, reembolsos
+- 💸 **Despesas**: Combustível, manutenção, seguro, alimentação, telefone, etc.
+- 📊 **Análises Completas**: 
+  - Lucro líquido real após todos os custos
+  - Margem de lucro percentual
+  - Média diária de ganhos
+  - Top categorias de despesas
+  - Previsão de gastos recorrentes
+- 🔄 **Despesas Recorrentes**: Registre gastos mensais (seguro, telefone)
+- 📸 **Anexos**: Adicione fotos de recibos
+- 🗓️ **Filtros**: Visualize por dia, semana, mês ou total
+- 🚗 **Integração com Corridas**: Receitas vinculadas automaticamente às corridas aceitas
+
+**[📖 Documentação Completa v3.1](FINANCIAL_SYSTEM_v3.1.md)**  
+**[📋 Guia de Implementação v3.1](IMPLEMENTATION_GUIDE_v3.1.md)**
+
+---
+
+### 🆕 v3.0 - Sistema de Semáforo para Ofertas
+**Decida quais corridas aceitar com confiança:**
+- 📱 **Detecção Automática**: Reconhece notificações de Uber, 99 e iDriver
+- 🧮 **Análise de Rentabilidade**: Score baseado em 7 fatores
+- 🚦 **Sistema de Semáforo**: 
+  - 🟢 Verde (≥70): Excelente, aceite!
+  - 🟡 Amarelo (50-69): Avalie com cuidado
+  - 🔴 Vermelho (<50): Evite, baixa rentabilidade
+- 📊 **Estatísticas**: Acompanhe taxas de aceitação/rejeição
+- ⏱️ **Histórico**: Veja todas as ofertas recebidas
+
+**Fatores analisados:**
+- Valor oferecido vs distância
+- Tempo estimado
+- Custo de combustível
+- Desgaste do veículo
+- Relação valor/hora
+- Eficiência da rota
+
+**[📖 Documentação Completa v3.0](RIDE_OFFERS_FEATURE_v3.md)**
+
+---
 
 ### Gerenciamento de Veículos
 - Criar múltiplos perfis de veículos
