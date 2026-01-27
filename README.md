@@ -1,6 +1,6 @@
 # Cálculo de Gastos - App Flutter
 
-Um aplicativo moderno e intuitivo para motoristas de aplicativos gerenciarem custos, analisarem ofertas de corridas e controlarem finanças, desenvolvido com Flutter e Material Design 3.
+Um aplicativo moderno e intuitivo para motoristas de aplicativos gerenciarem custos, analisarem ofertas de corridas e controlarem finanças, com gravação secreta de vídeo e marca d'água automática. Desenvolvido em Flutter (Material Design 3).
 
 ## ✨ Características Principais
 
@@ -9,6 +9,9 @@ Um aplicativo moderno e intuitivo para motoristas de aplicativos gerenciarem cus
 - ✅ **Rastreamento em Tempo Real**: Inicie corridas com contador automático
 - ✅ **🆕 Sistema de Semáforo (v3.0)**: Análise inteligente de ofertas com recomendações 🟢🟡🔴
 - ✅ **🆕 Controle Financeiro (v3.1)**: Gerencie receitas e despesas para calcular lucro real
+- ✅ **🆕 Remoção de anúncios (v3.2.1)**: Qualquer assinatura paga remove anúncios; apenas vídeo ads no free
+- ✅ **🆕 Tema dinâmico (v3.2.2)**: Dark/Light/System + 8 cores
+- ✅ **🆕 Gravação secreta + marca d'água (v3.2.3)**: Vídeos com data, hora, endereço e coordenadas, seleção de câmera e player dedicado
 - ✅ **Integração Google Maps**: Abra endereços e rotas diretamente
 - ✅ **Avaliações de Passageiros**: Adicione estrelas e comentários
 - ✅ **Interface Moderna**: Design Material 3 com tema responsivo
@@ -20,6 +23,53 @@ Um aplicativo moderno e intuitivo para motoristas de aplicativos gerenciarem cus
 - ✅ **Português Brasileiro**: Totalmente localizado
 
 ## 🎯 Funcionalidades
+
+### 🆕 v3.3 (próximo) - Sincronização em nuvem (planejado)
+**Planejado**:
+- Sincronizar vídeos e dados financeiros na nuvem
+- Backup automático e restauração
+- Compartilhamento seguro de gravações
+
+---
+
+### 🆕 v3.2.3 - Gravação Secreta + Marca d'Água
+**O que faz**:
+- Gravar vídeos secretamente com seleção de câmera (frontal/traseira)
+- Inserir marca d'água automática: data, hora, endereço e coordenadas
+- Galeria interna com metadados, player dedicado e salvar na galeria
+- Permissões guiadas (câmera, microfone, localização)
+
+**Como usar (rápido)**:
+1) Home → "Gravar" → iniciar/parar
+2) Marca d'água aparece no preview
+3) Vá em "Vídeos" para listar, reproduzir ou salvar
+
+**Docs**:
+- MARCA_DAGUA.md (técnico)
+- MARCA_DAGUA_SETUP.md (setup iOS/Android)
+- EXEMPLOS_MARCA_DAGUA.md (15 exemplos)
+- MARCA_DAGUA_RAPIDO.md (3 min)
+
+---
+
+### 🆕 v3.2.2 - Sistema de Tema Completo
+**O que faz**:
+- Dark/Light/System + 8 cores temáticas
+- Aplica em todas as telas (gravação, galeria, player, finanças)
+- Persistência de escolha do usuário
+
+**Como usar**:
+- Tela de Configurações de Tema → escolha modo e cor
+
+---
+
+### 🆕 v3.2.1 - Monetização (Anúncios)
+**Mudanças**:
+- Qualquer assinatura paga remove anúncios
+- Free: apenas um anúncio de vídeo quando aplicável
+- AdBanner descontinuado; interstitial/ vídeo mantido
+
+---
 
 ### 🆕 v3.1 - Sistema de Controle Financeiro
 **Gerencie todas as suas receitas e despesas:**
