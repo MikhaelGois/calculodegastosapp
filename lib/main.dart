@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
-            title: 'Cálculo de Gastos',
+            title: 'RodaLucro',
             debugShowCheckedModeBanner: false,
             themeMode: themeProvider.themeMode,
             theme: AppThemes.lightTheme(themeProvider.customColor),

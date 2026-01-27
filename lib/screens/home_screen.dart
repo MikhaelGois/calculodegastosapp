@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Cálculo de Gastos'),
+        title: const Text('RodaLucro'),
         elevation: 0,
         centerTitle: true,
         actions: [

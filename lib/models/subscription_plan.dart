@@ -25,7 +25,7 @@ extension SubscriptionTierExtension on SubscriptionTier {
   String get description {
     switch (this) {
       case SubscriptionTier.FREE:
-        return 'Cálculo de gastos básico com anúncios';
+        return 'RodaLucro básico com anúncios';
       case SubscriptionTier.RIDE_OFFERS:
         return 'Sistema de semáforo sem anúncios';
       case SubscriptionTier.FINANCIAL:
@@ -85,7 +85,7 @@ extension SubscriptionTierExtension on SubscriptionTier {
     switch (this) {
       case SubscriptionTier.FREE:
         return [
-          '✅ Cálculo de gastos',
+          '✅ RodaLucro básico (custos, veículos)',
           '✅ Gerenciamento de veículos',
           '✅ Histórico de corridas',
           '📢 Com anúncios',
@@ -115,7 +115,7 @@ extension SubscriptionTierExtension on SubscriptionTier {
       case SubscriptionTier.PREMIUM:
         return [
           '✅ TUDO LIBERADO',
-          '✅ Cálculo de gastos',
+          '✅ RodaLucro completo (custos, veículos)',
           '✅ Sistema de semáforo 🚦',
           '✅ Controle financeiro 💰',
           '✅ Análises avançadas',

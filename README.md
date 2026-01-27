@@ -1,4 +1,4 @@
-# Cálculo de Gastos - App Flutter
+# RodaLucro - App Flutter
 
 Um aplicativo moderno e intuitivo para motoristas de aplicativos gerenciarem custos, analisarem ofertas de corridas e controlarem finanças, com gravação secreta de vídeo e marca d'água automática. Desenvolvido em Flutter (Material Design 3).
 
