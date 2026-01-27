@@ -65,11 +65,7 @@ ${trip.endAddress != null ? '📍 ${trip.endAddress}' : ''}
   }
 
   /// Avalia corrida com feedback do passageiro
-  static Trip addRating(
-    Trip trip, {
-    required double stars,
-    String? comment,
-  }) {
+  static Trip addRating(Trip trip, {required double stars, String? comment}) {
     final rating = PassengerRating(stars: stars, comment: comment);
     return Trip(
       id: trip.id,

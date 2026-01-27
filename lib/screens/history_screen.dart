@@ -27,18 +27,13 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Histórico de Corridas'),
-        elevation: 0,
-      ),
+      appBar: AppBar(title: const Text('Histórico de Corridas'), elevation: 0),
       body: Consumer2<HistoryProvider, VehicleProvider>(
         builder: (context, historyProvider, vehicleProvider, _) {
           final selectedVehicle = vehicleProvider.selectedVehicle;
-          
+
           if (selectedVehicle == null) {
-            return const Center(
-              child: Text('Selecione um veículo'),
-            );
+            return const Center(child: Text('Selecione um veículo'));
           }
 
           final trips = historyProvider.getTripsByVehicle(selectedVehicle.id);
@@ -49,11 +44,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.history,
-                    size: 64,
-                    color: Colors.grey.shade400,
-                  ),
+                  Icon(Icons.history, size: 64, color: Colors.grey.shade400),
                   const SizedBox(height: 16),
                   Text(
                     'Nenhuma corrida registrada',
@@ -63,8 +54,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   Text(
                     'Suas corridas aparecerão aqui',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: Colors.grey.shade600,
-                        ),
+                      color: Colors.grey.shade600,
+                    ),
                   ),
                 ],
               ),
@@ -124,8 +115,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
         ),
         ResultCard(
           title: 'Distância Total',
-          value:
-              '${(stats['totalDistance'] ?? 0).toStringAsFixed(1)} km',
+          value: '${(stats['totalDistance'] ?? 0).toStringAsFixed(1)} km',
           backgroundColor: Colors.green.shade50,
           icon: Icons.route,
         ),
@@ -166,8 +156,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
                     Text(
                       trip.startAddress ?? 'Saída',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            fontWeight: FontWeight.w600,
-                          ),
+                        fontWeight: FontWeight.w600,
+                      ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -182,9 +172,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
                         const SizedBox(width: 4),
                         Text(
                           '$hours h ${minutes} min',
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                color: Colors.grey.shade600,
-                              ),
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(color: Colors.grey.shade600),
                         ),
                       ],
                     ),
@@ -195,9 +184,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
               Text(
                 FormatUtils.formatCurrency(trip.totalCost),
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                    ),
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                ),
               ),
             ],
           ),
@@ -207,10 +196,15 @@ class _HistoryScreenState extends State<HistoryScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _buildDetailRow('Distância', '${trip.distance.toStringAsFixed(1)} km'),
+                  _buildDetailRow(
+                    'Distância',
+                    '${trip.distance.toStringAsFixed(1)} km',
+                  ),
                   const SizedBox(height: 8),
-                  _buildDetailRow('Velocidade Média',
-                      '${trip.avgSpeed.toStringAsFixed(1)} km/h'),
+                  _buildDetailRow(
+                    'Velocidade Média',
+                    '${trip.avgSpeed.toStringAsFixed(1)} km/h',
+                  ),
                   const SizedBox(height: 8),
                   _buildDetailRow(
                     'Valor/km',
@@ -243,8 +237,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       children: [
                         if (trip.startAddress != null)
                           ElevatedButton.icon(
-                            onPressed: () =>
-                                MapsService.openMapsWithAddress(trip.startAddress!),
+                            onPressed: () => MapsService.openMapsWithAddress(
+                              trip.startAddress!,
+                            ),
                             icon: const Icon(Icons.location_on, size: 18),
                             label: const Text('Saída'),
                             style: ElevatedButton.styleFrom(
@@ -256,8 +251,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                           ),
                         if (trip.endAddress != null)
                           ElevatedButton.icon(
-                            onPressed: () =>
-                                MapsService.openMapsWithAddress(trip.endAddress!),
+                            onPressed: () => MapsService.openMapsWithAddress(
+                              trip.endAddress!,
+                            ),
                             icon: const Icon(Icons.location_on, size: 18),
                             label: const Text('Destino'),
                             style: ElevatedButton.styleFrom(
@@ -284,15 +280,15 @@ class _HistoryScreenState extends State<HistoryScreen> {
       children: [
         Text(
           label,
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Colors.grey.shade600,
-              ),
+          style: Theme.of(
+            context,
+          ).textTheme.bodyMedium?.copyWith(color: Colors.grey.shade600),
         ),
         Text(
           value,
-          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
+          style: Theme.of(
+            context,
+          ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
         ),
       ],
     );

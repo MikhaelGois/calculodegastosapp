@@ -60,17 +60,12 @@ class MyApp extends StatelessWidget {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(
-            color: Color(0xFF1F77D2),
-            width: 2,
-          ),
+          borderSide: const BorderSide(color: Color(0xFF1F77D2), width: 2),
         ),
       ),
       cardTheme: CardTheme(
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       textTheme: const TextTheme(
         displayLarge: TextStyle(

@@ -4,7 +4,7 @@ class MapsService {
   static Future<void> openMapsWithAddress(String address) async {
     final encodedAddress = Uri.encodeComponent(address);
     final url = 'https://www.google.com/maps/search/$encodedAddress';
-    
+
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
     }
@@ -17,7 +17,7 @@ class MapsService {
   }) async {
     final url =
         'https://www.google.com/maps/@$latitude,$longitude,15z${label != null ? '?q=$label' : ''}';
-    
+
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
     }
@@ -31,7 +31,7 @@ class MapsService {
   ) async {
     final url =
         'https://www.google.com/maps/dir/$startLat,$startLng/$endLat,$endLng';
-    
+
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
     }

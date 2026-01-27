@@ -72,13 +72,15 @@ class HistoryProvider extends ChangeNotifier {
   }
 
   double getTotalEarningsByVehicle(String vehicleId) {
-    return getTripsByVehicle(vehicleId)
-        .fold(0.0, (sum, trip) => sum + trip.earnings);
+    return getTripsByVehicle(
+      vehicleId,
+    ).fold(0.0, (sum, trip) => sum + trip.earnings);
   }
 
   double getTotalDistanceByVehicle(String vehicleId) {
-    return getTripsByVehicle(vehicleId)
-        .fold(0.0, (sum, trip) => sum + trip.distance);
+    return getTripsByVehicle(
+      vehicleId,
+    ).fold(0.0, (sum, trip) => sum + trip.distance);
   }
 
   // Métodos para Notifications
@@ -104,8 +106,7 @@ class HistoryProvider extends ChangeNotifier {
   Future<void> markAsRead(String notificationId) async {
     try {
       await StorageService.markNotificationAsRead(notificationId);
-      final index =
-          _notifications.indexWhere((n) => n.id == notificationId);
+      final index = _notifications.indexWhere((n) => n.id == notificationId);
       if (index >= 0) {
         final notif = _notifications[index];
         _notifications[index] = TripNotification(
@@ -143,9 +144,13 @@ class HistoryProvider extends ChangeNotifier {
 
     final totalDistance = getTotalDistanceByVehicle(vehicleId);
     final totalEarnings = getTotalEarningsByVehicle(vehicleId);
-    final avgRating = vehicleTrips
+    final avgRating =
+        vehicleTrips
             .where((t) => t.passengerRating != null)
-            .fold<double>(0, (sum, t) => sum + (t.passengerRating?.stars ?? 0)) /
+            .fold<double>(
+              0,
+              (sum, t) => sum + (t.passengerRating?.stars ?? 0),
+            ) /
         (vehicleTrips.where((t) => t.passengerRating != null).length > 0
             ? vehicleTrips.where((t) => t.passengerRating != null).length
             : 1);

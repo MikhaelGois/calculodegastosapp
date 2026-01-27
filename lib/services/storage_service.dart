@@ -6,7 +6,7 @@ class StorageService {
   static const String vehiclesBoxName = 'vehicles';
   static const String tripsBoxName = 'trips';
   static const String notificationsBoxName = 'notifications';
-  
+
   static late Box<Map> vehiclesBox;
   static late Box<Map> tripsBox;
   static late Box<Map> notificationsBox;
@@ -60,13 +60,11 @@ class StorageService {
     return tripsBox.values
         .map((map) => Trip.fromMap(Map<String, dynamic>.from(map)))
         .toList()
-        ..sort((a, b) => b.startTime.compareTo(a.startTime));
+      ..sort((a, b) => b.startTime.compareTo(a.startTime));
   }
 
   static List<Trip> getTripsByVehicle(String vehicleId) {
-    return getAllTrips()
-        .where((trip) => trip.vehicleId == vehicleId)
-        .toList();
+    return getAllTrips().where((trip) => trip.vehicleId == vehicleId).toList();
   }
 
   static Trip? getTrip(String tripId) {
@@ -77,8 +75,10 @@ class StorageService {
 
   static List<Trip> getTripsByDateRange(DateTime start, DateTime end) {
     return getAllTrips()
-        .where((trip) =>
-            trip.startTime.isAfter(start) && trip.startTime.isBefore(end))
+        .where(
+          (trip) =>
+              trip.startTime.isAfter(start) && trip.startTime.isBefore(end),
+        )
         .toList();
   }
 
@@ -91,7 +91,7 @@ class StorageService {
     return notificationsBox.values
         .map((map) => TripNotification.fromMap(Map<String, dynamic>.from(map)))
         .toList()
-        ..sort((a, b) => b.createdAt.compareTo(a.createdAt));
+      ..sort((a, b) => b.createdAt.compareTo(a.createdAt));
   }
 
   static List<TripNotification> getUnreadNotifications() {

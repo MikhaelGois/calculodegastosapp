@@ -36,10 +36,10 @@ class _OverlayNotificationWidgetState extends State<OverlayNotificationWidget>
       vsync: this,
     );
 
-    _slideAnimation = Tween<Offset>(
-      begin: const Offset(1, 0),
-      end: Offset.zero,
-    ).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeOut));
+    _slideAnimation = Tween<Offset>(begin: const Offset(1, 0), end: Offset.zero)
+        .animate(
+          CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
+        );
 
     _animationController.forward();
   }
@@ -120,10 +120,7 @@ class _OverlayNotificationWidgetState extends State<OverlayNotificationWidget>
               const SizedBox(height: 8),
               Text(
                 widget.notification.message,
-                style: TextStyle(
-                  color: Colors.grey.shade300,
-                  fontSize: 12,
-                ),
+                style: TextStyle(color: Colors.grey.shade300, fontSize: 12),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -148,10 +145,7 @@ class OverlayNotificationManager {
 
   OverlayEntry? _currentOverlayEntry;
 
-  void showNotification(
-    BuildContext context,
-    TripNotification notification,
-  ) {
+  void showNotification(BuildContext context, TripNotification notification) {
     // Remove notificação anterior se existir
     _currentOverlayEntry?.remove();
 
