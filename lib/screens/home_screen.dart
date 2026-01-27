@@ -7,6 +7,8 @@ import '../utils/format_utils.dart';
 import 'vehicle_form_screen.dart';
 import 'calculation_screen.dart';
 import 'results_screen.dart';
+import 'history_screen.dart';
+import 'realtime_trip_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -93,38 +95,69 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       SectionHeader(title: 'Ações Rápidas', icon: Icons.bolt),
                       const SizedBox(height: 12),
-                      Row(
+                      GridView.count(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 12,
+                        crossAxisSpacing: 12,
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
                         children: [
-                          Expanded(
-                            child: CustomButton(
-                              label: 'Calcular',
-                              icon: Icons.calculate,
-                              onPressed: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CalculationScreen(),
-                                  ),
-                                );
-                              },
-                            ),
+                          _buildActionButton(
+                            context,
+                            'Calcular',
+                            Icons.calculate,
+                            Colors.blue,
+                            () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CalculationScreen(),
+                                ),
+                              );
+                            },
                           ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: CustomButton(
-                              label: 'Editar',
-                              icon: Icons.edit,
-                              isPrimary: false,
-                              onPressed: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => VehicleFormScreen(
-                                      vehicle: provider.selectedVehicle,
-                                    ),
+                          _buildActionButton(
+                            context,
+                            'Tempo Real',
+                            Icons.timer,
+                            Colors.teal,
+                            () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RealTimeTripScreen(),
+                                ),
+                              );
+                            },
+                          ),
+                          _buildActionButton(
+                            context,
+                            'Editar',
+                            Icons.edit,
+                            Colors.orange,
+                            () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => VehicleFormScreen(
+                                    vehicle: provider.selectedVehicle,
                                   ),
-                                );
-                              },
-                            ),
+                                ),
+                              );
+                            },
+                          ),
+                          _buildActionButton(
+                            context,
+                            'Histórico',
+                            Icons.history,
+                            Colors.purple,
+                            () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const HistoryScreen(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
@@ -381,4 +414,36 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-}
+
+  Widget _buildActionButton(
+    BuildContext context,
+    String label,
+    IconData icon,
+    Color color,
+    VoidCallback onPressed,
+  ) {
+    return InkWell(
+      onTap: onPressed,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.1),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(icon, color: color, size: 28),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontWeight: FontWeight.w600,
+                ),
+          ),
+        ],
+      ),
+    );
+  }

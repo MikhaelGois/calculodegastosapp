@@ -1,18 +1,29 @@
 # Cálculo de Gastos - App Flutter
 
-Um aplicativo moderno e intuitivo para calcular gastos de frota de veículos, desenvolvido com Flutter e Material Design 3.
+Um aplicativo moderno e intuitivo para calcular gastos de frota de veículos com rastreamento de corridas em tempo real, desenvolvido com Flutter e Material Design 3.
 
 ## ✨ Características
 
 - ✅ **Cálculo Automatizado**: Custos fixos, variáveis, valor/hora e valor/km
+- ✅ **Histórico de Corridas**: Registre e acompanhe todas as corridas
+- ✅ **Rastreamento em Tempo Real**: Inicie corridas com contador automático
+- ✅ **Integração Google Maps**: Abra endereços e rotas diretamente
+- ✅ **Avaliações de Passageiros**: Adicione estrelas e comentários
 - ✅ **Interface Moderna**: Design Material 3 com tema responsivo
 - ✅ **Gerenciamento de Veículos**: Adicionar, editar e deletar múltiplos veículos
-- ✅ **Análise Detalhada**: Visualize breakdown completo de custos
+- ✅ **Análise Detalhada**: Visualize breakdown completo de custos e ganhos
 - ✅ **Persistência Local**: Dados salvos localmente com Hive
+- ✅ **Notificações Overlay**: Receba alertas de corridas finalizadas
 - ✅ **Multi-plataforma**: Android e iOS suportados
 - ✅ **Português Brasileiro**: Totalmente localizado
 
 ## 🎯 Funcionalidades
+
+### Gerenciamento de Veículos
+- Criar múltiplos perfis de veículos
+- Configurar custos fixos e variáveis
+- Definir tarifa por hora e por km
+- Gerenciar dados operacionais
 
 ### Custos Fixos
 - Parcela mensal (financiamento)
@@ -33,6 +44,24 @@ Um aplicativo moderno e intuitivo para calcular gastos de frota de veículos, de
 - Dias de trabalho por semana
 - Horas de trabalho por dia
 - Lucro desejado (semanal)
+
+### Histórico de Corridas
+- Registre corridas com tempo e distância
+- Salve endereços de saída e destino
+- Visualize estatísticas por veículo
+- Abra endereços no Google Maps
+- Adicione avaliações de passageiros
+
+### Rastreamento em Tempo Real
+- Contador de tempo automático
+- Cálculo de custos em tempo real
+- Possibilidade de pausar corrida
+- Salvamento automático
+
+### Sistema de Notificações
+- Overlay flutuante com detalhes da corrida
+- Histórico de notificações
+- Marcar como lidas
 
 ## 📱 Plataformas Suportadas
 - Android (API 21+)
