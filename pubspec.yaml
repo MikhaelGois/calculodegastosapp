@@ -1,0 +1,33 @@
+name: rotalucro
+description: Um aplicativo para analisar a rentabilidade de corridas sugeridas por apps como Uber, 99 e Indriver, com base em dados históricos e configurações de custos.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.2.2
+  permission_handler: ^11.0.1
+  uuid: ^4.1.0
+  intl: ^0.18.1
+  flutter_local_notifications: ^16.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+  
+  # Fontes personalizadas podem ser adicionadas aqui
+  
